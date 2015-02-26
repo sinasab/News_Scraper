@@ -2,10 +2,10 @@
 ## Web Scraping
 
 ## Roles
-* Overall Project Manager:
-* Coding Manager:
-* Testing Manager:
-* Documentation:
+* Overall Project Manager: Roman Claprood
+* Coding Manager: Tom Antenucci
+* Testing Manager: Zach Spieler
+* Documentation: Sina Sabet
 
 ## Contributions
 Please list who did what for each part of the project, and if anyone [pair programmed](http://en.wikipedia.org/wiki/Pair_programming) in this section.
