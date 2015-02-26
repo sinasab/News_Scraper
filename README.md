@@ -3,9 +3,9 @@
 
 ## Roles
 * Overall Project Manager: Roman Claprood
-* Coding Manager: Tom Antenucci
+* Documentation Manager: Tom Antenucci
 * Testing Manager: Zach Spieler
-* Documentation: Sina Sabet
+* Implementation Manager: Sina Sabet
 
 ## Contributions
 Please list who did what for each part of the project, and if anyone [pair programmed](http://en.wikipedia.org/wiki/Pair_programming) in this section.
