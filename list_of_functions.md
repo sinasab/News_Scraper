@@ -1,5 +1,7 @@
 list of functions
 
+** this is out of date since we went with the news idea instead **
+
 fetchCategories()
 	returns array of categories
 
