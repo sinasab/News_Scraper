@@ -50,7 +50,7 @@ def writeLinkTags(doc,file)
 	for i in 0..titles.size do
 		file.write ("\n")
 		file.write ("\t\t<h1 class=\"title\"><a href=")
-		file.write ("\"www.news.osu.edu/")
+		file.write ("\"http://www.news.osu.edu/")
 		file.write (links[i])
 		file.write ("\""">"+titles[i].to_s+"</a></h1>")
 		file.write("\n")
@@ -73,7 +73,7 @@ file.write("\t\t<\p>\n")
 file.write("\t</body>\n")
 file.write("</html>\n")
 
-Launchy.open("file:///cse3901/project_3/webpage.html")
+
 
 # arrTitle = Array.new
 
