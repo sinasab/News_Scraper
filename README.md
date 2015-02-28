@@ -14,7 +14,7 @@ Roman: Started webScraper.rb. Used nokogiri gem to parse/grab Title of articles 
 
 Tom:
 
-Zach: 
+Zach: Used launchy gem to start to begin moving grabbed data to an html doc that will load upon running the program.
 
 Sina:
 
