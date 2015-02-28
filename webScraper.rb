@@ -1,7 +1,8 @@
 require 'mechanize'
 require 'nokogiri'
 require 'open-uri'
-
+require 'launchy'
+require 'rubygems'
 
 #not being used 
 mech = Mechanize.new
@@ -14,6 +15,22 @@ print "Web Scraper ALPHA build"
 20.times {print"*"}
 3.times {puts"\n"}
 
+#create a file to write html code to
+file = File.open("webpage.html", 'w')
+#file.write("<!DOCTYPE html>\n")
+file.write("<html lang=\"en\">\n")
+file.write("\t<head>\n")
+file.write("\t\t<title>Test</title>\n")
+file.write("\t\t<meta charset=\"utf-8\" />\n") 
+file.write("\t</head>\n")
+file.write("\t<body>\n")
+file.write("\t\t<p>\n")
+file.write("\t\t\tTest\n") 
+file.write("\t\t<\p>\n") 
+file.write("\t</body>\n")
+file.write("</html>\n")
+
+Launchy.open("file:///home/zach/cse3901/lab3/webpage.html")
 
 arrTitle = Array.new
 
