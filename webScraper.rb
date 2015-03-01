@@ -49,6 +49,43 @@ def grabLinks(doc)
 end
 
 =begin
+Uses the links from the webpage to find the author of each news story
+
+returns: An array of authors in order by links
+written by Steve
+
+
+def getAuth(links)
+
+	authArr = Array.new
+
+	for i in 0..links.size do 
+		encLink = URI.encode(links[i])
+		doc = Nokogiri::HTML(open("http://www.news.osu.edu/" + URI.parse(encLink)))
+		aname = doc.xpath('//p[@class="author_name"]/a').text
+		puts aname
+		authArr.push aname
+		
+	end
+	for i in 0..authArr.size do
+		puts "#{authArr[i]}"
+	end
+
+	return authArr
+end
+
+=end
+
+def grabDates(doc)
+	arrDate = Array.new
+	doc.xpath('//span[@class="date"]').each do |date|
+		(arrDate << date.text)
+	end
+	return arrDate
+end
+
+
+=begin
 This loop dispays the print the titles of the articles along
 with the link the story in HTML form.
 
@@ -57,18 +94,28 @@ Written by Roman
 def writeLinkTags(doc,file)
 	titles =grabTitles(doc,file)
 	links =grabLinks(doc)
+	#authors = getAuth(links)
+	dates = grabDates(doc)
 	for i in 0..titles.size do
 		file.write ("\n")
-		file.write ("\t\t<h4 class=\"title\"><a href=")
+		file.write ("\t\t<tr>\n")
+		file.write ("\t\t\t<td>\n")
+		file.write ("\t\t\t\t<h4 class=\"title\"><a href=")
 		file.write ("\"http://www.news.osu.edu/")
 		file.write (links[i])
-		file.write ("\""">"+titles[i].to_s+"</a></h4>")
+		file.write ("\""">"+titles[i].to_s+"</a></h4>\n")
+		file.write ("\t\t\t</td>\n")
+		file.write ("\t\t\t<td>\n")
+		file.write ("\t\t\t\t<p>" + dates[i].to_s + "</p>\n")
+		file.write ("\t\t\t</td>\n")
 		file.write("\n")
 	end
 end
 
 # #create a file to write html code to
 #Written by Zach, editied by Tom
+
+
 file.write("<!DOCTYPE html>\n")
 file.write("<html lang=\"en\">\n")
 file.write("\t<head>\n")
@@ -77,8 +124,10 @@ file.write("\t\t<title>TCP WebScraper</title>\n")
 file.write("\t\t<meta charset=\"utf-8\" />\n") 
 file.write("\t</head>\n")
 file.write("\t<body>\n")
-file.write("\t<br /><h1>TCP OHIO STATE NEWS WEBSCRAPER<h1/>")
+file.write("\t<br /><h1>TCP OHIO STATE NEWS WEBSCRAPER</h1>\n\n")
+file.write("\t<table>")
 writeLinkTags(doc,file)
+file.write("\t</table>")
 file.write("\t\t<p>\n")
 file.write("\t\t</p>\n") 
 file.write("\t</body>\n")
