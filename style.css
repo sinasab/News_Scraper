@@ -23,3 +23,7 @@ h4 {
 	color: rgb(101,30,30);
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+table {
+	width : 100%;
+}
