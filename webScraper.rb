@@ -12,19 +12,24 @@ doc = Nokogiri::HTML(open("http://news.osu.edu/news/"))
 file = File.open("webpage.html", 'w')
 
 3.times {puts"\n"}
-20.times {print"*"} 
-print "Web Scraper ALPHA build" 
-20.times {print"*"}
+25.times {print"*"} 
+print "Web Scraper BETA build" 
+25.times {print"*"}
+puts""
+print("\t\tLook for webpage.html output in folder")
 3.times {puts"\n"}
 
 =begin
 this puts the title(text) that is in h4 tags
-in an arry.  Current has extras, need to remove
-or come up with a Better way to find the titles.
+in an array. Refined to only select tags wwhich are
+hr4 and have a class of title.
+
+returns: An array of the titles of links.
+written by:Roman
 =end
 def grabTitles(doc,file)
 	arrTitle = Array.new
-	doc.xpath('//h4').each do |title|
+	doc.xpath('//h4[@class="title"]').each do |title|
 		(arrTitle << title.text)
 	end
 	return arrTitle
@@ -33,6 +38,9 @@ end
 
 =begin
 This grabs the links following the tags. Then place into an array.
+
+returns: An array of links to the news stories.
+written by Roman
 =end
 def grabLinks(doc)
 	links = doc.xpath('//h4/a/@href')
@@ -42,7 +50,9 @@ end
 
 =begin
 This loop dispays the print the titles of the articles along
-with the link the story.
+with the link the story in HTML form.
+
+Written by Roman
 =end
 def writeLinkTags(doc,file)
 	titles =grabTitles(doc,file)
@@ -58,7 +68,7 @@ def writeLinkTags(doc,file)
 end
 
 # #create a file to write html code to
-# file = File.open("webpage.html", 'w')
+#Written by Zach, editied by Tom
 file.write("<!DOCTYPE html>\n")
 file.write("<html lang=\"en\">\n")
 file.write("\t<head>\n")
@@ -70,16 +80,16 @@ file.write("\t<body>\n")
 file.write("\t<br /><h1>TCP OHIO STATE NEWS WEBSCRAPER<h1/>")
 writeLinkTags(doc,file)
 file.write("\t\t<p>\n")
-file.write("\t\t\tTest\n") 
-file.write("\t\t<\p>\n") 
+file.write("\t\t</p>\n") 
 file.write("\t</body>\n")
 file.write("</html>\n")
 
 
 
-# arrTitle = Array.new
 
 
+################## USED FOR TESTING##########################
+## arrTitle = Array.new
 # this puts the title(text) that is in h4 tags
 # in an arry.  Current has extras, need to remove
 # or come up with a Better way to find the titles.
