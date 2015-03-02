@@ -6,7 +6,6 @@ Takes a file as an input and writes html code to it in order to create an html f
 
 =end
 def htmlHeader(file)
-
 	file.write("<!DOCTYPE html>\n")
 	file.write("<html lang=\"en\">\n")
 	file.write("\t<head>\n")
@@ -15,7 +14,7 @@ def htmlHeader(file)
 	file.write("\t\t<meta charset=\"utf-8\" />\n") 
 	file.write("\t</head>\n")
 	file.write("\t<body>\n")
-	file.write("\t<br /><h1>TCP OHIO STATE NEWS WEBSCRAPER</h1>\n\n")
+	file.write("\t<br /><h1>TCP OHIO STATE NEWS WEBSCRAPER</h1>\n")
+	file.write("\t<h2>News for: #{Time.now.strftime("%m/%d/%Y")}</h2>\n\n")
 	file.write("\t<table>")
-
 end
