@@ -20,6 +20,12 @@ h1 {
 	font-size: 3em;
 }
 
+h2 {
+	color: rgb(156,28,28);
+	text-align: center;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
 h4 {
 	text-align: center;
 	color: rgb(101,30,30);

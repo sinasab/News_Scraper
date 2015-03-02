@@ -1,7 +1,6 @@
 require 'mechanize'
 require 'nokogiri'
 require 'open-uri'
-require 'launchy'
 require 'rubygems'
 require_relative './intro'
 require_relative './grabTitles'
@@ -10,20 +9,29 @@ require_relative './grabDates'
 require_relative './htmlHeader'
 require_relative './writeLinkTags'
 require_relative './htmlCloser'
+require_relative './outro.rb'
 
-#not being used 
-mech = Mechanize.new
+#run introduction
+intro
 #sets of a page to be parse. doc is the name
+print "\nGrabbing data from http://news.osu.edu/news/....."
 doc = Nokogiri::HTML(open("http://news.osu.edu/news/"))
+print "done!"
 #create a file to write html code to
+print "\nAttempting to create output file....."
 file = File.open("webpage.html", 'w')
+print "done!"
 
+print "\nWriting to output file....."
 htmlHeader(file)
 writeLinkTags(doc,file)
 htmlCloser(file)
+print "done!"
+print "\n\nScraping complete! The output file is located at #{File.expand_path(File.dirname(file))+"/"+file.path}."
+file.close
 
-
-
+#run outro
+outro
 
 
 ################## USED FOR TESTING##########################
