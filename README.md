@@ -19,7 +19,7 @@ and printing them in HTML format.
 
 Tom:
 
-Zach: Played with launchy gem to try and have the program automatically open the html file. It was later decided to have the user open it instead. Wrote code to have all of the html structure be written to a separate file. Organized code once complete so our main file (webScraper.rb) was as clean as possible. Move all functions in the program to their own respective files.
+Zach: Played with launchy gem to try and have the program automatically open the html file. It was later decided to have the user open it instead. Wrote code to have all of the html structure be written to a separate file. Organized code once complete so our main file (webScraper.rb) was as clean as possible. Move all functions in the program to their own respective files. Found ruby gem (launchy) to use that would open browser directly from program.
 
 Sina: Prettied up console output and added functionality to open the file automatically in the user's default web browser. Made outro.rb. Added to intro.rb. 
 
