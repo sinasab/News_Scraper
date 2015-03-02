@@ -11,7 +11,7 @@ require_relative './writeLinkTags'
 require_relative './htmlCloser'
 require_relative './outro.rb'
 
-#contributors: Sina
+#contributors: Roman, Sina
 
 #run introduction
 intro
