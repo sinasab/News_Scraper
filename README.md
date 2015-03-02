@@ -17,7 +17,7 @@ Please list who did what for each part of the project, and if anyone [pair progr
 Roman: Started webScraper.rb. Used nokogiri gem to parse/grab Title of articles and links to webpage. Wrote functions for grabbing elements 
 and printing them in HTML format.
 
-Tom:
+Tom: Edited webScraper.rb to make styling and format of the resulting html document easier. Created the style sheet for the html document created by the Web scraper, including small edits to webScraper.rb to make additional features for styling simpler.
 
 Zach: Played with launchy gem to try and have the program automatically open the html file. It was later decided to have the user open it instead. Wrote code to have all of the html structure be written to a separate file. Organized code once complete so our main file (webScraper.rb) was as clean as possible. Move all functions in the program to their own respective files. Found ruby gem (launchy) to use that would open browser directly from program.
 
