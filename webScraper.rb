@@ -11,6 +11,8 @@ require_relative './writeLinkTags'
 require_relative './htmlCloser'
 require_relative './outro.rb'
 
+#contributors: Sina
+
 #run introduction
 intro
 #sets of a page to be parse. doc is the name
