@@ -1,5 +1,5 @@
 # #create a file to write html code to
-#Written by Zach, editied by Tom and Sina
+#Written by Zach, editied by Tom, Sina, and Steve
 
 =begin
 Takes a file as an input and writes html code to it in order to create an html file. Only does opening tags

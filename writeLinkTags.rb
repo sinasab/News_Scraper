@@ -6,12 +6,11 @@ require_relative './grabLinks'
 This loop dispays the print the titles of the articles along
 with the link the story in HTML form.
 
-Written by Roman
+Written by Roman, contributions by Steve
 =end
 def writeLinkTags(doc,file)
 	titles =grabTitles(doc,file)
 	links =grabLinks(doc)
-	#authors = getAuth(links)
 	dates = grabDates(doc)
 	for i in 0..titles.size do
 		file.write ("\n")
