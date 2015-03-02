@@ -1,6 +1,7 @@
 =begin
 
-Prints introductory message to console, including description of what the program will do.
+	Prints introductory message to console, including description of what the program will do.
+	Contributors: Sina
 	
 =end
 
