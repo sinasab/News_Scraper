@@ -23,7 +23,7 @@ Zach: Played with launchy gem to try and have the program automatically open the
 
 Sina: Prettied up console output and added functionality to open the file automatically in the user's default web browser. Made outro.rb. Added to intro.rb. 
 
-Steven:
+Steven: Wrote method for grabbing date and outputing it to html page.
 
 ## Testing
 Please put all testing materials (writeups code etc) in the `testing` dir.
