@@ -1,6 +1,8 @@
 # Project 3
 ## Web Scraping
 
+To run: Run webScraper.rb. From there, an .html file will be created in the same directory. From there, right click and open with firefox or browser of choice.
+
 ## Roles
 * Overall Project Manager: Roman Claprood
 * Documentation Manager: Tom Antenucci
@@ -15,7 +17,7 @@ and printing them in HTML format.
 
 Tom:
 
-Zach: Used launchy gem to start to begin moving grabbed data to an html doc that will load upon running the program.
+Zach: Played with launchy gem to try and have the program automatically open the html file. It was later decided to have the user open it instead. Wrote code to have all of the html structure be written to a separate file. Organized code once complete so our main file (webScraper.rb) was as clean as possible. Move all functions in the program to their own respective files.
 
 Sina:
 
